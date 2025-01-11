@@ -1,0 +1,43 @@
+# Binary files
+*.bin
+*.img
+*.iso
+*.o
+*.obj
+
+# NASM listing files
+*.lst
+
+# Backup files
+*~
+*.bak
+*.backup
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Windows specific
+Thumbs.db
+Desktop.ini
+
+# Build directories
+build/
+bin/
+obj/
+
+# Debug files
+*.debug
+*.sym
+
+# Log files
+*.log
+
+# GoLink files
+golink.exe
+*.dll
+*.lib
+*.exp
+*.map 
