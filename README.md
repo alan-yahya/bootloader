@@ -17,6 +17,7 @@ A 16-bit real mode bootloader which displays system information including CPU, g
 - x86/x86_64 processor architecture
 - NASM (Netwide Assembler)
 - QEMU (for testing)
+- GoLink (for linking object files)
 
 ## Installation
 
@@ -32,6 +33,10 @@ A 16-bit real mode bootloader which displays system information including CPU, g
    ```
    Or download from [QEMU website](https://www.qemu.org/download/)
 
+3. Download GoLink:
+   - Get GoLink from [GoDevTool website](http://www.godevtool.com/)
+   - Place `GoLink.exe` in your project directory or system PATH
+
 ## Building and Running
 
 1. Build the bootloader:
@@ -43,6 +48,12 @@ A 16-bit real mode bootloader which displays system information including CPU, g
    - Assemble the bootloader using NASM
    - Create a binary file (bootloader.bin)
    - Launch QEMU to run the bootloader
+
+3. For linking object files (if needed):
+   ```bash
+   GoLink /console /entry main yourfile.obj kernel32.dll user32.dll
+   ```
+   This creates an executable from your object file with Windows system DLLs.
 
 ## File Structure
 
@@ -58,7 +69,7 @@ A 16-bit real mode bootloader which displays system information including CPU, g
 - BIOS interrupts for system information
 - Text mode display (80x25)
 - Color-coded information display
-- Windows-specific build tools
+- Windows-specific build tools (NASM + GoLink)
 - DOS interrupts for system time
 
 ## License
